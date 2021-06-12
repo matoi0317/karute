@@ -1,8 +1,10 @@
 <template>
-    <div>
+    <div class="aaa">
         <div class="contents">
-            <div class="view-karute"></div>
-            <div class="info"></div>
+            <div class="view-karute">
+            </div>
+            <div class="info">
+            </div>
         </div>
     </div>
 </template>
@@ -12,21 +14,29 @@ export default {}
 </script>
 
 <style>
-.contents{
+*{
+    background-color: #f1f0ec;
+}
+.aaa{
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-
+}
+.contents{
+    width: 60%;
+    margin: 0 auto;
 }
 .view-karute{
-    width: 80%;
-    height: 250px;
-    background-color: red;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 220px;
+    background-color: white;
 }
 
+
 .info{
-    width: 80%;
-    height: 250px;
-    background-color: blue;  
+    width: 100%;
+    height: 220px;
+    background-color: white;
 }
 </style>
