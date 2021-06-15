@@ -14,10 +14,8 @@ export default {}
 </script>
 
 <style>
-*{
-    background-color: #f1f0ec;
-}
-.aaa{
+
+/* .aaa{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -38,5 +36,5 @@ export default {}
     width: 100%;
     height: 220px;
     background-color: white;
-}
+} */
 </style>
