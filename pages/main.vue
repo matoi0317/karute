@@ -1,9 +1,13 @@
 <template>
     <div class="aaa">
         <div class="contents">
-            <div class="view-karute">
+            <div class="img-sample1">
+                <img src="./sample.png" class="sample1">
             </div>
-            <div class="info">
+            <div class="title">Karute</div>
+            <div class="buttons">
+                <button class="button1">カルテを見る</button>
+                <button class="button2">個人情報</button>
             </div>
         </div>
     </div>
@@ -14,27 +18,42 @@ export default {}
 </script>
 
 <style>
-
-/* .aaa{
-    height: 100vh;
-    display: flex;
-    align-items: center;
+img.sample1{
+    width:200px;
 }
-.contents{
-    width: 60%;
-    margin: 0 auto;
-}
-.view-karute{
-    margin-bottom: 60px;
-    width: 100%;
-    height: 220px;
-    background-color: white;
+.img-sample1{
+    padding-top: 30px;
+    text-align: center;
 }
 
+.title{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 30px;
+    color:#F68655;
+    margin-top: -10px;
+}
+.buttons{
+    text-align: center;
+}
+button.button1{
+    margin-top:110px;
+    margin-bottom: 30px;
+    background-color: #F6B352;
+    border:#FC913A;
+    border-radius: 15px;
+    width:75%;
+    height: 30px;
+    color:white;
+}
 
-.info{
-    width: 100%;
-    height: 220px;
-    background-color: white;
-} */
+button.button2{
+    margin-bottom: 50px;
+    background-color: #FC913A;
+    border:#F68655;
+    border-radius: 15px;
+    width:75%;
+    height: 30px;
+    color:white;
+}
 </style>
