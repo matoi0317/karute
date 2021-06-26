@@ -3,6 +3,8 @@
         <div class="header">
             <p class="header-title">個人情報</p>
         </div>
+        <div class="profile-icon"></div>
+        <hr>
     </div>
 </template>
 
@@ -24,5 +26,10 @@ export default {}
     color: white;
     text-align: center;
     font-weight: bold;
+}
+
+.profile-icon{
+    width:100%;
+    height:110px;
 }
 </style>

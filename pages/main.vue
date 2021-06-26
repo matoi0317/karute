@@ -22,7 +22,7 @@ img.sample1{
     width:200px;
 }
 .img-sample1{
-    padding-top: 30px;
+    padding-top: 60px;
     text-align: center;
 }
 
