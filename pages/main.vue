@@ -4,10 +4,10 @@
             <div class="img-sample1">
                 <img src="./sample.png" class="sample1">
             </div>
-            <div class="title">Karute</div>
+            <div class="title">Welcome to Karute</div>
             <div class="buttons">
                 <button class="button1">カルテを見る</button>
-                <button class="button2">個人情報</button>
+                <a href="information"><button class="button2">個人情報</button></a>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@ img.sample1{
 
 .title{
     text-align: center;
-    font-weight: lighter;
+    font-weight: 200;
     font-size: 30px;
     color:#F68655;
     margin-top: -10px;
