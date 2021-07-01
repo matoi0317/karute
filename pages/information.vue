@@ -4,7 +4,7 @@
             <p class="header-title">個人情報</p>
         </div>
         <div class="profile-icon"></div>
-        <hr>
+        <hr class="style1">
     </div>
 </template>
 
@@ -13,6 +13,11 @@ export default {}
 </script>
 
 <style>
+hr.style1{
+    margin: 0 auto;
+    width:90%;
+    border-top:0.5px solid #f1f1f1;
+}
 .header{
     display: table;
     width:100%;

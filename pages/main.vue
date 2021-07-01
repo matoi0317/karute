@@ -18,6 +18,9 @@ export default {}
 </script>
 
 <style>
+.aaa {
+    padding-top:5%;
+}
 img.sample1{
     width:200px;
 }
