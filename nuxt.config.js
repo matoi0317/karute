@@ -1,4 +1,6 @@
+import * as FontAwesome from './build/fontawesome'
 export default {
+  
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -24,8 +26,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,6 +39,26 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    [
+      "@nuxtjs/firebase",
+      {
+        config: {
+          apiKey: "AIzaSyDPeg9J4uFdpXRPeX9LsWibXVda4lstWQk",
+          authDomain: "karute-81f3c.firebaseapp.com",
+          projectId: "karute-81f3c",
+          storageBucket: "karute-81f3c.appspot.com",
+          messagingSenderId: "369985687952",
+          appId: "1:369985687952:web:c94ff519f492f40436a315",
+          measurementId: "G-3ND3M4QHY7"
+        },
+        services: {
+          auth: true,
+          firestore: {
+            enablePersistence: true
+          }
+        }
+      }
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -45,5 +66,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  
+  buildModules: [
+    ['@nuxtjs/fontawesome', { component: 'fontAwesome', suffix: true }]
+  ],
+  fontawesome: {
+    icons: {
+      solid: FontAwesome.solid,
+      regular: FontAwesome.regular,
+      brands: FontAwesome.brands
+    }
   }
 }

@@ -6,7 +6,7 @@
             </div>
             <div class="title">Welcome to Karute</div>
             <div class="buttons">
-                <button class="button1">カルテを見る</button>
+                <a href="karute"><button class="button1">カルテを見る</button></a>
                 <a href="information"><button class="button2">個人情報</button></a>
             </div>
         </div>
@@ -14,7 +14,22 @@
 </template>
 
 <script>
-export default {}
+import firebase from "firebase/app";
+import "firebase/auth";
+// 匿名認証
+export default {
+    created () {
+        firebase.auth().signInAnonymously()
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+            });
+    },
+}
 </script>
 
 <style>
@@ -38,6 +53,9 @@ img.sample1{
 }
 .buttons{
     text-align: center;
+}
+.buttons button{
+    cursor: pointer;
 }
 button.button1{
     margin-top:110px;
