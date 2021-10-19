@@ -13,7 +13,7 @@
             <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
         </div>
         <div class="cp_ipselect">
-            <select class="cp_sl06" required>
+            <select v-model="gender" class="cp_sl06" required>
                 <option value="" hidden disabled selected></option>
                 <option value="1">男性</option>
                 <option value="2">女性</option>
@@ -23,8 +23,16 @@
             <label class="cp_sl06_selectlabel"><i class="fas fa-transgender fa-lg fa-fw"></i>性別</label>
         </div>
         <div class="cp_iptxt">
-            <input type="text" placeholder="生年月日">
+            <input v-model="birth" type="text" placeholder="生年月日">
             <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+		<div class="keep">
+			<button class="save" @click="save">保存</button>
+		</div>
+		<div class="hooter">
+			<a class= "back" href="main">戻る</a>
+			<a class="home" href="main">ホーム</a>
+			<a class="next">次へ</a>
         </div>
     </div>
 </template>
@@ -33,11 +41,33 @@
 export default {
     data(){
         return {
-            name:"",
-            gender:"",
-            birth:""
+            name: this.$cookies.get("name"),
+            gender: this.$cookies.get("gender"),
+			birth: this.$cookies.get("birth")
         }
-    }
+    },
+	mounted(){
+
+	},
+	methods:{
+		save(){
+			alert("保存しました")
+			console.log("aaa",this.name)
+			const maxAge = 60 * 60 * 24 * 365 * 10
+			this.$cookies.set("name", this.name, {
+				maxAge: maxAge,
+			})
+			console.log("bbb", this.gender)
+			this.$cookies.set("gender", this.gender, {
+				maxAge: maxAge,
+			})
+			console.log("ccc", this.birth)
+			this.$cookies.set("birth", this.birth, {
+				maxAge: maxAge,
+			})
+		}
+	}
+	
 }
 </script>
 
@@ -214,5 +244,35 @@ export default {
 	opacity: 0.5;
 }
 
+.hooter{
+	position: fixed;
+    display: flex;
+    bottom: 0;
+    background-color: #F6B352;
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.hooter .home{
+  margin: 0 auto;
+}
+
+
+.hooter a{
+  color:white;
+  text-decoration: none;
+}
+
+.save{
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	margin-left: 10%;
+	width:70px;
+	height:40px;
+}
 
 </style>
